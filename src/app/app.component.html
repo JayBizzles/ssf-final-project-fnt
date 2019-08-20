@@ -1,19 +1,28 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome User!
-  </h1>
-  <img width="100" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<div id=log>
+<ul class = "nav navbar-nav">
+    <li>
+        <a routerLink="register"><button class="btn-register" >Register</button></a>
+    </li>
+       
+    <li>
+        <a routerLink="login"><button class="btn-login" >Login</button></a>
+    </li>
+    
+    <li>
+        <a routerLink ="login"><button class = "btn-home">Home</button></a>
+    </li>
+
+</ul>
+    <router-outlet></router-outlet>
+
+<!-- <div id=log>
     <h3>If you have an existing account you can login below</h3>
     <button type = "button" class = "logbtn" (click)= "someFunc()" > Login</button>
     <h3>Register below to make a new account</h3>
     <button type = "button" class = "regbtn" (click) = "anotherFunc()" >Register</button>
-</div>
-
-<a routerLink="register"><button class="btn-register" >Register</button></a>
-<a routerLink="login"><button class="btn-login" >Login</button></a>
+</div> -->
 
 
-<router-outlet></router-outlet>
+
+
+

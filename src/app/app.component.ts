@@ -11,11 +11,6 @@ export class AppComponent {
   
   constructor(private router:Router){}
 
-  someFunc(){  // compiler can not find this function
-    this.router.navigate(['/login']);
-  }
+  
 
-  anotherFunc(){
-    this.router.navigate(['/register']);
-  }
 }

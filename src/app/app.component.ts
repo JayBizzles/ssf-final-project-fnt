@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ssf-final-project-fnt';
+  
+  constructor(private router:Router){}
+
+  someFunc(){  // compiler can not find this function
+    this.router.navigate(['/login']);
+  }
+
+  anotherFunc(){
+    this.router.navigate(['/register']);
+  }
 }

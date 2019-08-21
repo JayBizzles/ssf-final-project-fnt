@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  someFunc(){  // compiler can not find this function
+  someFunc(){
     this.router.navigate(['/login']);
   }
 

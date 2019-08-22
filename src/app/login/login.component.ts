@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmailValidator } from '@angular/forms';
+import {UserService} from '../user.service';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { EmailValidator } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   
-  constructor() { }
+  constructor(private serv:UserService) { }
 
   user = {
     userName: "",
@@ -18,6 +19,10 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  login(){
+
   }
 
 }

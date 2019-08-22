@@ -8,9 +8,10 @@ export class UserService {
 
   constructor(public http:HttpClient) {}
 
-  baseUrl = "http://localhost:4000"
+  baseUrl = "http://localhost:4000/api/appUsers"
 
   postUser(user){
-    return this.http.post("http://localhost:4000",user)
+    console.log(user)
+    return this.http.post(this.baseUrl,user)
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from '../user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -8,7 +9,7 @@ import {UserService} from '../user.service';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private serv:UserService) { }
+  constructor(private serv:UserService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -23,7 +24,15 @@ export class RegisterComponent implements OnInit {
   }
 
   register(){
-    this.serv.postUser(this.user);
+    this.serv.postUser(this.user)
+      .subscribe( (res: any ) =>{
+        sessionStorage.setItem('token', res.token);
+        sessionStorage.setItem('userId', res.userId);
+        this.router.navigate(['/dashboard']);
+        console.log(res);
+      });
   }
+
+  
 
 }
